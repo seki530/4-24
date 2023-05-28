@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :post_images, only: [:new, :create, :index, :show]
+  resources :post_images, only: [:new, :create, :index, :show, :destroy]
+  resources :users, only: [:show, :edit]
   get 'homes/about'
   devise_for :users
   get 'homes/top'
